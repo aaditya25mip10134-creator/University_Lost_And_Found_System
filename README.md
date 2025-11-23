@@ -1,28 +1,67 @@
-# University_Lost_And_Found_System
- A Python-based CLI (Command Line Interface) program called the University Lost & Found Registry was created to make it easier to report and retrieve misplaced objects on a university campus or in a dorm.
+# 🎒 University Lost & Found Registry
 
- This initiative offers a centralized, durable digital log where students can report missing items, register found objects, and search the database using keywords, replacing disorganized manual notices and chat groups.
- Important Features 📝 Report things: Users can record information about lost or found things, such as their location, description, and contact data.
+> **A Python-based solution to organize the chaos of lost items on campus.**
 
-🔎 Smart Search: Users can locate products with ease using case-insensitive keyword search (e.g., searching "bag" finds "Blue Bag").
+### 📖 Overview
+We've all been there—losing an ID card in the cafeteria or finding a stray set of keys in the hallway. Currently, retrieving these items involves scrolling through endless WhatsApp groups or checking messy notice boards.
 
-💾 Data Persistence: Ensures data is saved even after the program ends by using File I/O (CSV).
+The **University Lost & Found Registry** is a CLI (Command Line Interface) tool designed to fix this. It provides a centralized, digital log where students can report missing items, register found objects, and search for them instantly. It replaces the "needle in a haystack" search with a simple, persistent database.
 
-✅ Claim & Resolve: After an object is returned to its owner, it can be removed from the database.
+---
 
-🛠️ Tech Stack Language: Python 3.x
+### ✨ Key Features
 
-Modules utilized include datetime (timestamping), os (file verification), and csv (database processing).
+* **📝 Report & Log:** Users can easily record details about lost or found items, including location, physical description, and contact information.
+* **🔎 Smart Search:** Includes a case-insensitive keyword search (e.g., searching for "wallet" will also find "Black Leather Wallet").
+* **💾 Data Persistence:** Unlike a simple script that forgets data when closed, this program uses **File I/O (CSV)** to ensure records are saved permanently.
+* **✅ Claim & Resolve:** Once an item is returned to its rightful owner, the entry can be officially removed from the database to keep the registry clean.
 
-Modular programming, file handling, string manipulation, and exception handling are among the concepts used.
+---
 
-📂 Project Organization
- The project employs a Top-Down Modular Design methodology:
+### 🛠️ Tech Stack & Concepts
 
- initialize_system(): If the CSV database doesn't already exist, it is set up.
+This project was built to demonstrate core Python programming concepts, connecting theory with a real-world application.
 
- report_item() publishes data to the file and manages user input.
+* **Language:** Python 3.x
+* **Libraries:**
+    * `csv`: For handling the database operations.
+    * `datetime`: For timestamping entries.
+    * `os`: For file verification and system compatibility.
+* **Core Concepts Applied:**
+    * Modular Programming (Top-Down Design)
+    * File Handling (Read/Write/Append)
+    * String Manipulation
+    * Exception Handling (Error management)
 
- search_items(): This function reads the file and uses user queries to filter data.
+---
 
- delete_item(): Manages the reasoning behind removing or claiming cases that have been resolved.
+### 📂 Project Structure
+
+The code follows a **Top-Down Modular Design** approach to ensure readability and easy maintenance:
+
+| Module / Function | Description |
+| :--- | :--- |
+| **`initialize_system()`** | Checks system health. If the CSV database doesn't exist, it creates a new one with headers. |
+| **`report_item()`** | Captures user input (Lost/Found details) and securely writes it to the database file. |
+| **`search_items()`** | Reads the file and filters data based on user keywords to find matches. |
+| **`delete_item()`** | Handles the logic for closing cases (removing items that have been claimed). |
+
+---
+
+### 🚀 How to Run
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/lost-and-found-registry.git](https://github.com/your-username/lost-and-found-registry.git)
+    ```
+2.  **Navigate to the project folder:**
+    ```bash
+  code.py
+    ```
+3.  **Run the script:**
+    ```bash
+    python main.py
+    ```
+    *(Note: Ensure you have Python installed on your system).*
+
+---
