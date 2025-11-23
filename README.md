@@ -55,9 +55,9 @@ The code follows a **Top-Down Modular Design** approach to ensure readability an
     git clone [https://github.com/your-username/lost-and-found-registry.git](https://github.com/your-username/lost-and-found-registry.git)
     ```
 2.  **Navigate to the project folder:**
-    ```bash
+  
   code.py
-    ```
+  
 3.  **Run the script:**
     ```bash
     python main.py
